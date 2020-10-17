@@ -1,0 +1,19 @@
+version: '3.2'
+services:
+  localstack:
+    container_name: localstack
+    image: localstack/localstack:0.11.5
+    ports:
+      - "4566:4566"
+      - "4571:4571"
+    # https://github.com/localstack/localstack#configurations
+    environment:
+      - SERVICES=s3
+      - DEBUG=0
+      # option to if you want to persist the AWS environment
+      #- DATA_DIR=/tmp/localstack/data
+      - HOST_TMP_FOLDER=/tmp/localstack
+      - DEFAULT_REGION=us-east-1
+    volumes:
+      - /tmp/localstack:/tmp/localstack
+      - /var/run/docker.sock:/var/run/docker.sock

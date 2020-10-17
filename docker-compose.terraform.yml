@@ -1,0 +1,9 @@
+version: '3.2'
+services:
+  terraform:
+    container_name: terraform
+    image: hashicorp/terraform:0.13.4
+    network_mode: host
+    volumes:
+      - "${PWD}:/tf"
+    working_dir: /tf
