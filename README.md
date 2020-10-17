@@ -34,14 +34,14 @@ alternative/example if you don't want to run it using the `./tf` script.
 function tf () {
   # grants access to host network and uses the current directory as
   # the working directory with read-write mode
-	docker run \
-		--interactive \
-		--tty \
-		--network host \
-		--volume "$(pwd):/tf:rw" \
-		--workdir '/tf' \
-		hashicorp/terraform:light \
-		"$@"
+  docker run \
+    --interactive \
+    --tty \
+    --network host \
+    --volume "$(pwd):/tf:rw" \
+    --workdir '/tf' \
+    hashicorp/terraform:light \
+    "$@"
 }
 ```
 
