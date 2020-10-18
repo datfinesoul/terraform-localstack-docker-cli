@@ -1,5 +1,9 @@
 # terraform-localstack-docker-cli
 
+Examples of:
+- Running Terraform CLI from within a docker container on the Host
+- Running Terraform scripts against localstack
+
 ## Starting localstack
 
 ```bash
