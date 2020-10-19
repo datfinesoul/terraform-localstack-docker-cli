@@ -1,5 +1,7 @@
 # terraform-localstack-docker-cli
 
+[![GitHub Super-Linter](https://github.com/datfinesoul/terraform-localstack-docker-cli/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
+
 Examples of:
 - Running Terraform CLI from within a docker container on the Host
 - Running Terraform scripts against localstack
@@ -43,6 +45,7 @@ function tf () {
     --tty \
     --network host \
     --volume "$(pwd):/tf:rw" \
+    --user "$(id -u):$(id -g)" \
     --workdir '/tf' \
     hashicorp/terraform:light \
     "$@"

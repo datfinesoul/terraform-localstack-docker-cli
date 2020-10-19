@@ -9,3 +9,4 @@ services:
         source: "${PWD}"
         target: /tf
     working_dir: /tf
+    user: "${TF_UID}:${TF_GID}"
