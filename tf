@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
-export TF_UID="$(id -u)"
-export TF_GID="$(id -u)"
+TF_UID="$(id -u)"
+TF_GID="$(id -u)"
+export TF_UID TF_GID
 docker-compose \
   -f docker-compose.terraform.yml \
   -p terraform \
