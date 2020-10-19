@@ -5,5 +5,7 @@ services:
     image: hashicorp/terraform:0.13.4
     network_mode: host
     volumes:
-      - "${PWD}:/tf"
+      - type: bind
+        source: "${PWD}"
+        target: /tf
     working_dir: /tf
