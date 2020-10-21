@@ -47,6 +47,7 @@ function tf () {
     --volume "$(pwd):/tf:rw" \
     --user "$(id -u):$(id -g)" \
     --workdir '/tf' \
+    --rm \
     hashicorp/terraform:light \
     "$@"
 }

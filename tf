@@ -6,4 +6,5 @@ docker-compose \
   -f docker-compose.terraform.yml \
   -p terraform \
   run \
+  --rm \
   terraform "$@"
